@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Russle Alex Teñoso - CpE</title>
+  <meta name="description" content="Russle Alex Teñoso is a Computer Engineer who applies technical thinking to remote support, operations, administration, and workflow improvement.">
+  <meta name="theme-color" content="#FAF8FC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Russle Alex Teñoso | Remote Support and Operations">
+  <meta property="og:description" content="Technical thinking for remote support, operations, administration, and workflow improvement.">
+  <meta property="og:image" content="resources/icon/icon.jpg">
+  <meta property="og:image:alt" content="Russle Alex Teñoso portfolio icon">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Russle Alex Teñoso | Remote Support and Operations">
+  <meta name="twitter:description" content="Technical thinking for remote support, operations, administration, and workflow improvement.">
+  <meta name="twitter:image" content="resources/icon/icon.jpg">
+  <title>Russle Alex Teñoso | Remote Support and Operations</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="resources/icon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="resources/icon/icon.jpg" type="image/jpeg">
   <!-- Boxicons CDN  Icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -13,18 +24,43 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Russle Alex Teñoso",
+      "jobTitle": "Computer Engineer and Remote Support Professional",
+      "description": "Computer Engineer applying technical thinking to remote support, operations, administration, and workflow improvement.",
+      "sameAs": [
+        "https://github.com/Clexievere",
+        "https://linkedin.com/in/russle-te%C3%B1oso-111b28172",
+        "https://x.com/heispotatofires"
+      ]
+    }
+  </script>
 </head>
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <a class="brand-mark" href="#hero" aria-label="Go to homepage">
+        <img src="resources/icon/icon.jpg" alt="Russle Alex Teñoso">
+      </a>
+      <ul id="nav-menu">
+        <li><a href="#hero"><i class="bx bx-home-alt-2" aria-hidden="true"></i> Home</a></li>
+        <li><a href="#about"><i class="bx bx-user" aria-hidden="true"></i> About</a></li>
+        <li><a href="#skills"><i class="bx bx-brain" aria-hidden="true"></i> Skills</a></li>
+        <li><a href="#tools"><i class="bx bx-wrench" aria-hidden="true"></i> Tools</a></li>
+        <li><a href="#projects"><i class="bx bx-folder-open" aria-hidden="true"></i> Projects</a></li>
+        <li><a href="#contact"><i class="bx bx-envelope" aria-hidden="true"></i> Contact</a></li>
       </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <i class="bx bx-moon" aria-hidden="true"></i>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <i class="bx bx-menu" aria-hidden="true"></i>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -33,9 +69,22 @@
 
     <section id="hero">
       <div class="container">
-        <h1>Russle Alex Teñoso</h1>
-        <h2>Computer Engineer</h2>
-        <p class="tagline">Your guide through the chaos — remote support, systems, and solutions, sorted.</p>
+        <div class="hero-content">
+          <h1>Russle Alex Teñoso</h1>
+          <h2>Computer Engineer</h2>
+          <p class="tagline">Your guide through the chaos — remote support, systems, and solutions, sorted. I use technical thinking to help remote teams stay organized, supported, and productive.</p>
+          <ul class="hero-tags" aria-label="Areas of focus">
+            <li>Technical Support</li>
+            <li>Remote Operations</li>
+            <li>Administrative Support</li>
+            <li>Workflow Improvement</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View My Projects</a>
+            <a class="button button-secondary" href="#contact">Contact Me</a>
+          </div>
+          <p class="hero-availability"><i class="bx bx-check-circle" aria-hidden="true"></i> Open to remote opportunities</p>
+        </div>
         <div class="hero-photo-wrap">
           <div class="hero-photo-backdrop"></div>
           <div class="hero-photo-frame">
@@ -47,98 +96,203 @@
 
     <section id="about">
       <div class="container">
+        <p class="section-kicker">01 / About</p>
         <h2>Who am I?</h2>
-        <p>I am a Computer Engineer from the Philippines, with a background in Networking & Systems Administration. There's a pattern across most of what I build and study: finding ways to do things once instead of repeatedly — my thesis, for example, synced Ghidra and GDB so reverse engineering work didn't require manually switching back and forth between them. I bring that same instinct to client work: I spent the past year as a remote Virtual Assistant for a Canadian law firm, and I'm now expanding into technical IT support, aiming to help the people I work with get more done with less effort. I continue growing through hands-on projects like this portfolio.</p>
+        <div class="about-layout">
+          <div class="about-copy">
+            <p>I am a Computer Engineer from the Philippines with a background in networking and systems administration. Across the work I build and study, I look for ways to make tasks more efficient and avoid unnecessary repetition. For my thesis, I integrated Ghidra and GDB so reverse engineering work did not require manually switching between them.</p>
+            <p>I bring that same instinct to client work. After spending the past year as a remote Virtual Assistant for a Canadian law firm, I am continuing to grow through technical support, administration, and workflow-focused work. My goal is to use my technical experience to help teams in different fields get more done with less effort.</p>
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="Introduction video for Russle Alex Teñoso"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <dl class="about-facts">
+            <div>
+              <dt><i class="bx bx-graduation" aria-hidden="true"></i> Background</dt>
+              <dd>Computer Engineering</dd>
+            </div>
+            <div>
+              <dt><i class="bx bx-map" aria-hidden="true"></i> Based in</dt>
+              <dd>The Philippines</dd>
+            </div>
+            <div>
+              <dt><i class="bx bx-target-lock" aria-hidden="true"></i> Current focus</dt>
+              <dd>Remote support & operations</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="about-details">
+          <div>
+            <h3>Career Focus</h3>
+            <div class="workflow-path" aria-label="Technical thinking workflow">
+              <span>Understand</span>
+              <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+              <span>Organize</span>
+              <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+              <span>Improve</span>
+            </div>
+            <p>I am building toward work that combines technical understanding with remote support, administration, coordination, and practical workflow improvement across different fields.</p>
+          </div>
+          <div>
+            <h3>What I Bring</h3>
+            <ul class="strength-list">
+              <li><i class="bx bx-bulb" aria-hidden="true"></i> Practical problem-solving</li>
+              <li><i class="bx bx-detail" aria-hidden="true"></i> Clear documentation</li>
+              <li><i class="bx bx-conversation" aria-hidden="true"></i> Reliable communication</li>
+              <li><i class="bx bx-refresh" aria-hidden="true"></i> Continuous learning</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bx bx-book-open" aria-hidden="true"></i></div>
+            <div class="timeline-content">
+              <p class="timeline-status">Foundation</p>
+              <h3>Computer Engineering</h3>
+              <p>Built a technical foundation across programming, systems, networking, and problem-solving.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bx bx-code-block" aria-hidden="true"></i></div>
+            <div class="timeline-content">
+              <p class="timeline-status">Thesis Project</p>
+              <h3>Ghidra-GDB Integration</h3>
+              <p>Connected Ghidra and GDB to make reverse engineering work more efficient.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bx bx-briefcase" aria-hidden="true"></i></div>
+            <div class="timeline-content">
+              <p class="timeline-status">Experience</p>
+              <h3>Remote Virtual Assistant</h3>
+              <p>Supported a Canadian law firm through remote administrative and communication work.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"><i class="bx bx-target-lock" aria-hidden="true"></i></div>
+            <div class="timeline-content">
+              <p class="timeline-status">Current Focus</p>
+              <h3>Remote Support & Operations</h3>
+              <p>Using technical knowledge to support teams through organization, communication, systems thinking, and dependable execution.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-next">
+            <div class="timeline-marker"><i class="bx bx-lock-alt" aria-hidden="true"></i></div>
+            <div class="timeline-content">
+              <p class="timeline-status">Next Objective</p>
+              <h3>Cross-Functional Support</h3>
+              <p>Unlocking the next stage by applying technical experience to more remote roles, teams, and industries.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     
     <section id="skills">
       <div class="container">
+        <p class="section-kicker">02 / Skills</p>
         <h2>Skills</h2>
-        
-        <div class="skill-group">
-          <h3>Programming Languages</h3>
-          <ul>
-            <li><i class="devicon-python-plain"></i> Python</li>
-            <li><i class="devicon-javascript-plain"></i> JavaScript</li>
-            <li><i class="devicon-html5-plain"></i> HTML & CSS</li>
-            <li><i class="devicon-cplusplus-plain"></i> C/C++</li>
-            <li><i class="devicon-java-plain"></i> Java</li>
-          </ul>
-        </div>
+        <p class="section-intro">Capabilities I use to solve technical and operational problems.</p>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3><i class="bx bx-code-alt" aria-hidden="true"></i> Programming Languages</h3>
+            <ul>
+              <li><i class="devicon-python-plain" aria-hidden="true"></i> Python</li>
+              <li><i class="devicon-javascript-plain" aria-hidden="true"></i> JavaScript</li>
+              <li><i class="devicon-html5-plain" aria-hidden="true"></i> HTML & CSS</li>
+              <li><i class="devicon-cplusplus-plain" aria-hidden="true"></i> C/C++</li>
+              <li><i class="devicon-java-plain" aria-hidden="true"></i> Java</li>
+            </ul>
+          </div>
 
-        <div class="skill-group">
-          <h3>Networking & Systems Administration</h3>
-          <ul>
-            <li><i class="bx bx-network-chart"></i> Network Configuration</li>
-            <li><i class="bx bx-server"></i> System Maintenance</li>
-          </ul>
-        </div>
+          <div class="skill-group">
+            <h3><i class="bx bx-network-chart" aria-hidden="true"></i> Networking & Systems</h3>
+            <ul>
+              <li><i class="bx bx-network-chart" aria-hidden="true"></i> Network Configuration</li>
+              <li><i class="bx bx-server" aria-hidden="true"></i> System Maintenance</li>
+            </ul>
+          </div>
 
-        <div class="skill-group">
-          <h3>Administrative</h3>
-          <ul>
-            <li><i class="bx bx-envelope"></i> Email Management</li>
-            <li><i class="bx bx-calendar"></i> Project Management</li>
-            <li><i class="bx bx-user"></i> Client Communication</li>
-            <li><i class="bx bx-file"></i> Documentation</li>
-            <li><i class="bx bx-folder"></i> File Management</li>
-            <li><i class="bx bx-calendar"></i> Scheduling & Calendar Management</li>
-            <li><i class="bx bx-data"></i> Data Entry</li>
-          </ul>
-        </div>
+          <div class="skill-group">
+            <h3><i class="bx bx-briefcase" aria-hidden="true"></i> Administrative Support</h3>
+            <ul>
+              <li><i class="bx bx-envelope" aria-hidden="true"></i> Email Management</li>
+              <li><i class="bx bx-calendar" aria-hidden="true"></i> Project Management</li>
+              <li><i class="bx bx-user" aria-hidden="true"></i> Client Communication</li>
+              <li><i class="bx bx-file" aria-hidden="true"></i> Documentation</li>
+              <li><i class="bx bx-folder" aria-hidden="true"></i> File Management</li>
+              <li><i class="bx bx-calendar" aria-hidden="true"></i> Scheduling & Calendar Management</li>
+              <li><i class="bx bx-data" aria-hidden="true"></i> Data Entry</li>
+            </ul>
+          </div>
 
-        <div class="skill-group">
-          <h3>Video Editing</h3>
-          <ul>
-            <li><i class="bx bx-film"></i> Multi-track editing</li>
-            <li><i class="bx bx-paint"></i> Overlays and basic effects</li>
-          </ul>
+          <div class="skill-group">
+            <h3><i class="bx bx-video" aria-hidden="true"></i> Video Editing</h3>
+            <ul>
+              <li><i class="bx bx-film" aria-hidden="true"></i> Multi-track Editing</li>
+              <li><i class="bx bx-paint" aria-hidden="true"></i> Overlays & Basic Effects</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="tools">
       <div class="container">
+        <p class="section-kicker">03 / Tools</p>
         <h2>Tools</h2>
-        
-        <div class="tool-group">
-          <h3>Development & Version Control</h3>
-          <ul>
-            <li><i class="devicon-vscode-plain"></i> Visual Studio Code</li>
-            <li><i class="devicon-git-plain"></i> Git</li>
-            <li><i class="devicon-github-plain"></i> GitHub</li>
-            <li><i class="devicon-docker-plain"></i> Docker</li>
-          </ul>
-        </div>
+        <p class="section-intro">Software and platforms I use to build, organize, and support my work.</p>
+        <div class="tools-grid">
+          <div class="tool-group">
+            <h3><i class="bx bx-git-branch" aria-hidden="true"></i> Development & Version Control</h3>
+            <ul>
+              <li><i class="devicon-vscode-plain" aria-hidden="true"></i> Visual Studio Code</li>
+              <li><i class="devicon-git-plain" aria-hidden="true"></i> Git</li>
+              <li><i class="devicon-github-plain" aria-hidden="true"></i> GitHub</li>
+              <li><i class="devicon-docker-plain" aria-hidden="true"></i> Docker</li>
+            </ul>
+          </div>
 
-        <div class="tool-group">
-          <h3>Design & Prototyping</h3>
-          <ul>
-            <li><i class="devicon-figma-plain"></i> Figma</li>
-            <li><i class="devicon-photoshop-plain"></i> Adobe Photoshop</li>
-            <li><i class="devicon-illustrator-plain"></i> Adobe Illustrator</li>
-            <li><i class="devicon-canva-plain"></i> Canva</li>
-            <li><i class="bx bx-video"></i> Capcut</li>
-          </ul>
-        </div>
+          <div class="tool-group">
+            <h3><i class="bx bx-palette" aria-hidden="true"></i> Design & Prototyping</h3>
+            <ul>
+              <li><i class="devicon-figma-plain" aria-hidden="true"></i> Figma</li>
+              <li><i class="devicon-photoshop-plain" aria-hidden="true"></i> Adobe Photoshop</li>
+              <li><i class="devicon-illustrator-plain" aria-hidden="true"></i> Adobe Illustrator</li>
+              <li><i class="devicon-canva-plain" aria-hidden="true"></i> Canva</li>
+              <li><i class="bx bx-video" aria-hidden="true"></i> CapCut</li>
+            </ul>
+          </div>
 
-        <div class="tool-group">
-          <h3>Database Management</h3>
-          <ul>
-            <li><i class="devicon-mysql-plain"></i> MySQL</li>
-            <li><i class="devicon-mongodb-plain"></i> MongoDB</li>
-          <!-- <li><i class="devicon-postgresql-plain"></i> PostgreSQL</li> -->
-          </ul>
-        </div>
+          <div class="tool-group">
+            <h3><i class="bx bx-data" aria-hidden="true"></i> Database Management</h3>
+            <ul>
+              <li><i class="devicon-mysql-plain" aria-hidden="true"></i> MySQL</li>
+              <li><i class="devicon-mongodb-plain" aria-hidden="true"></i> MongoDB</li>
+            <!-- <li><i class="devicon-postgresql-plain" aria-hidden="true"></i> PostgreSQL</li> -->
+            </ul>
+          </div>
 
-        <div class="tool-group">
-          <h3>Productivity & Organization</h3>
-          <ul>
-            <li><i class="devicon-notion-plain"></i> Notion</li>
-            <li><i class="devicon-google-plain"></i> Google Workspace</li>
-            <li><i class="bx bx-calendar"></i> Google Calendar</li>
-          </ul>
+          <div class="tool-group">
+            <h3><i class="bx bx-task" aria-hidden="true"></i> Productivity & Organization</h3>
+            <ul>
+              <li><i class="devicon-notion-plain" aria-hidden="true"></i> Notion</li>
+              <li><i class="devicon-google-plain" aria-hidden="true"></i> Google Workspace</li>
+              <li><i class="bx bx-calendar" aria-hidden="true"></i> Google Calendar</li>
+            </ul>
+          </div>
         </div>
 
         <!--
@@ -158,34 +312,131 @@
 
     <section id="projects">
       <div class="container">
+        <p class="section-kicker">04 / Projects</p>
         <h2>Projects</h2>
-        <div class="project">
-          <h3>Project 1</h3>
-          <p>Description of Project 1.</p>
+        <p class="section-intro">A growing gallery of technical work, experiments, and future case studies.</p>
+        <div class="project-filters" role="group" aria-label="Filter projects by category">
+          <button class="project-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="project-filter" type="button" data-filter="technical" aria-pressed="false">Technical</button>
+          <button class="project-filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+          <button class="project-filter" type="button" data-filter="operations" aria-pressed="false">Operations</button>
         </div>
-        <div class="project">
-          <h3>Project 2</h3>
-          <p>Description of Project 2.</p>
+        <div class="project-gallery">
+          <article class="project-card" data-category="technical">
+            <div class="project-preview project-preview-thesis" aria-hidden="true">
+              <div class="preview-browser-bar"><i></i><i></i><i></i></div>
+              <i class="bx bx-code-block"></i>
+              <span>Preview placeholder</span>
+            </div>
+            <div class="project-card-content">
+              <p class="project-category">Research & Development</p>
+              <h3>Ghidra-GDB Integration</h3>
+              <p>A reverse engineering workflow designed to reduce manual switching between Ghidra and GDB.</p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li>Python</li>
+                <li>Ghidra</li>
+                <li>GDB</li>
+              </ul>
+              <span class="project-link-placeholder">Case study coming soon</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <div class="project-preview project-preview-portfolio" aria-hidden="true">
+              <div class="preview-browser-bar"><i></i><i></i><i></i></div>
+              <i class="bx bx-layout"></i>
+              <span>Preview placeholder</span>
+            </div>
+            <div class="project-card-content">
+              <p class="project-category">Web & Presentation</p>
+              <h3>Personal Portfolio</h3>
+              <p>A responsive portfolio that brings together technical experience, remote support, and operations work.</p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <span class="project-link-placeholder">Live project in progress</span>
+            </div>
+          </article>
+
+          <article class="project-card project-card-placeholder" data-category="operations">
+            <div class="project-preview project-preview-next" aria-hidden="true">
+              <div class="preview-browser-bar"><i></i><i></i><i></i></div>
+              <i class="bx bx-lock-alt"></i>
+              <span>Next project slot</span>
+            </div>
+            <div class="project-card-content">
+              <p class="project-category">Coming Next</p>
+              <h3>Remote Workflow Project</h3>
+              <p>A future case study showing how technical thinking can improve organization, support, or team operations.</p>
+              <ul class="project-tags" aria-label="Potential project areas">
+                <li>Operations</li>
+                <li>Automation</li>
+                <li>Support</li>
+              </ul>
+              <span class="project-link-placeholder">Details to be unlocked</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <div class="container">
+        <p class="section-kicker">05 / Contact</p>
         <h2>Contact Me</h2>
-        <ul class="social-links">
-          <li><a href="https://x.com/heispotatofires" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bx bxl-twitter"></i></a></li>
-          <li><a href="https://facebook.com/shinshinzuki" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bx bxl-facebook"></i></a></li>
-          <li><a href="https://instagram.com/shinshinzuki" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bx bxl-instagram"></i></a></li>
-          <li><a href="https://linkedin.com/in/russle-teñoso-111b28172" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a></li>
-          <li><a href="https://github.com/Clexievere" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bx bxl-github"></i></a></li>
-        </ul>
+        <div class="contact-layout">
+          <div class="contact-copy">
+            <h3>Let’s connect</h3>
+            <p>Have a question, an opportunity, or an idea worth exploring? You can find me through any of the platforms below.</p>
+            <p class="contact-availability"><i class="bx bx-check-circle" aria-hidden="true"></i> Open to remote opportunities in technical support, operations, administration, and client support.</p>
+          </div>
+          <ul class="social-links">
+            <li>
+              <a href="https://x.com/heispotatofires" target="_blank" rel="noopener noreferrer" aria-label="Open my X profile">
+                <i class="bx bxl-twitter" aria-hidden="true"></i>
+                <span>X</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/shinshinzuki" target="_blank" rel="noopener noreferrer" aria-label="Open my Facebook profile">
+                <i class="bx bxl-facebook" aria-hidden="true"></i>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/shinshinzuki" target="_blank" rel="noopener noreferrer" aria-label="Open my Instagram profile">
+                <i class="bx bxl-instagram" aria-hidden="true"></i>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/russle-teñoso-111b28172" target="_blank" rel="noopener noreferrer" aria-label="Open my LinkedIn profile">
+                <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Clexievere" target="_blank" rel="noopener noreferrer" aria-label="Open my GitHub profile">
+                <i class="bx bxl-github" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
   <footer>
-  <p>&copy; 2026 ShinzukiShin. All rights reserved.</p>
+    <div class="footer-inner">
+      <p>&copy; 2026 ShinzukiShin. All rights reserved.</p>
+      <a href="#hero">Back to top <i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
+    </div>
   </footer>
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <i class="bx bx-up-arrow-alt" aria-hidden="true"></i>
+  </button>
   <script src="js/script.js"></script>
 </body>
 </html>

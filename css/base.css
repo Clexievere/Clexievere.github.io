@@ -1,0 +1,98 @@
+/* ===== Reset and theme foundations ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #FAF8FC;
+  --color-surface: #EDE4F7;
+  --color-accent: #9F7AEA;
+  --color-accent-soft: #D9C4EC;
+  --color-figure: #B47DDB;
+  --color-success: #2F9E44;
+  --color-text: #2D2438;
+  --color-text-muted: #6B5E7B;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+}
+
+[data-theme="dark"] {
+  --color-bg: #16121F;
+  --color-surface: #241E33;
+  --color-accent: #C3B1E1;
+  --color-accent-soft: #3A2E4D;
+  --color-figure: #8B6FB3;
+  --color-success: #69DB7C;
+  --color-text: #EDE7F6;
+  --color-text-muted: #A99BC0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2rem, 5vw + 1rem, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem); }
+h3 { font-size: clamp(1.125rem, 2vw + 0.5rem, 1.5rem); }
+h4 { font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem); }
+h5 { font-size: clamp(0.875rem, 2vw + 0.5rem, 1.125rem); }
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.section-kicker {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-kicker::after {
+  width: 3rem;
+  height: 1px;
+  background-color: var(--color-accent);
+  content: "";
+}
+
+.section-intro {
+  max-width: 48rem;
+  margin-top: calc(var(--space-xs) * -1);
+  margin-bottom: var(--space-md);
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,26 @@
+/* ===== Responsive layout adjustments ===== */
+@media (max-width: 760px) {
+  .skills-grid,
+  .tools-grid { grid-template-columns: 1fr; }
+  .project-gallery { grid-template-columns: 1fr; }
+
+  .about-layout,
+  .about-details { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .about-details,
+  .about-timeline { margin-top: var(--space-lg); }
+  .strength-list { grid-template-columns: 1fr; }
+  .contact-layout { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .contact-copy { max-width: none; }
+  .footer-inner { flex-direction: column; justify-content: center; text-align: center; }
+  .back-to-top { right: var(--space-sm); bottom: var(--space-sm); }
+  .social-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  #hero .container { grid-template-columns: 1fr; gap: var(--space-lg); min-height: auto; text-align: center; }
+  .hero-content,
+  .tagline { margin-inline: auto; }
+  .hero-photo-wrap { justify-self: center; width: min(320px, 85vw); }
+}
+
+@media (max-width: 420px) {
+  .social-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

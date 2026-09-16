@@ -1,0 +1,93 @@
+/* ===== Decorative figures, hero media, floating control, and motion ===== */
+#hero { position: relative; overflow: hidden; }
+#hero::before { position: absolute; inset: 0; background-image: linear-gradient(var(--color-accent) 1px, transparent 1px), linear-gradient(90deg, var(--color-accent) 1px, transparent 1px); background-size: 48px 48px; opacity: 0.08; pointer-events: none; content: ""; }
+
+#about::after,
+#contact::after,
+#about::before,
+#contact::before,
+#skills::before,
+#tools::before { position: absolute; border: 1px solid var(--color-figure); opacity: 0.45; pointer-events: none; content: ""; }
+
+#skills::after,
+#projects::before { position: absolute; border: 1px solid var(--color-figure); opacity: 0.45; pointer-events: none; content: ""; }
+
+#about::after,
+#projects::after,
+#contact::after { right: -4rem; bottom: -4rem; width: 13rem; height: 13rem; box-shadow: 0.75rem 0.75rem 0 var(--color-figure); opacity: 0.35; transform: translateY(var(--figure-shift, 0px)) rotate(45deg); }
+#about::before { top: 4rem; right: 12rem; width: 6rem; height: 6rem; border-radius: 50%; box-shadow: 0.7rem 0.7rem 0 var(--color-figure), 1.4rem 1.4rem 0 -0.4rem var(--color-figure); transform: translateY(var(--figure-shift, 0px)); }
+#about::after { right: -3rem; bottom: -3rem; transform: translateY(var(--figure-shift, 0px)) rotate(25deg); }
+#skills::after { top: -2.5rem; left: 18%; width: 5rem; height: 5rem; border-radius: 50%; box-shadow: 0.55rem 0.55rem 0 -0.15rem var(--color-figure), 1.1rem 1.1rem 0 -0.3rem var(--color-figure); transform: translateY(var(--figure-shift, 0px)) rotate(18deg); }
+#skills::after { z-index: 2; }
+#projects::before { display: none; }
+#projects::after { display: none; }
+#projects::before { top: -4rem; left: 2rem; z-index: 0; display: block; width: 6rem; height: 6rem; border-radius: 0.5rem; box-shadow: -0.55rem 0.55rem 0 var(--color-figure); transform: translateY(var(--figure-shift, 0px)) rotate(45deg); }
+#contact::before { top: 3rem; right: 5rem; width: 5rem; height: 5rem; border-radius: 50% 0 50% 0; box-shadow: 0.8rem -0.8rem 0 -0.25rem var(--color-figure), 1.6rem -1.6rem 0 -0.5rem var(--color-figure); transform: translateY(var(--figure-shift, 0px)) rotate(20deg); }
+#contact::after { right: auto; bottom: -4rem; left: -4rem; transform: translateY(var(--figure-shift, 0px)) rotate(35deg); }
+#contact::before { z-index: 2; }
+#skills::before,
+#tools::before { top: 2rem; right: 3rem; width: 8rem; height: 8rem; box-shadow: 0.6rem 0.6rem 0 var(--color-figure); opacity: 0.55; transform: translateY(var(--figure-shift, 0px)) rotate(45deg); }
+#skills::before { top: 3rem; right: 4rem; width: 7rem; height: 7rem; }
+#tools::before { top: auto; right: 8rem; bottom: -4rem; left: auto; width: 9rem; height: 9rem; border-radius: 0; box-shadow: 0.65rem 0.65rem 0 var(--color-figure); transform: translateY(var(--figure-shift, 0px)) rotate(12deg); }
+
+.hero-photo-wrap { position: relative; width: 320px; height: 400px; justify-self: end; }
+.hero-photo-backdrop { position: absolute; top: 20px; right: -20px; width: 100%; height: 100%; border-radius: 200px 200px 0 0; background-color: var(--color-accent-soft); z-index: 1; }
+.hero-photo-frame { position: relative; width: 100%; height: 100%; border-radius: 200px 200px 0 0; overflow: hidden; background-color: var(--color-surface); z-index: 2; }
+.hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+.back-to-top { position: fixed; right: var(--space-md); bottom: var(--space-md); z-index: 9; display: grid; width: 2.75rem; height: 2.75rem; place-items: center; border: 1px solid var(--color-accent); border-radius: 50%; background-color: var(--color-accent); color: var(--color-bg); cursor: pointer; font-size: 1.4rem; opacity: 0; pointer-events: none; transform: translateY(1rem); transition: opacity 180ms ease, transform 180ms ease, background-color 180ms ease; }
+.back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background-color: var(--color-text); transform: translateY(-3px); }
+.back-to-top:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+
+@supports (min-height: 100svh) { #hero { min-height: calc(100svh - 5rem); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-content { animation: fade-up 700ms ease-out both; }
+  .hero-photo-wrap { animation: float 5s ease-in-out 300ms infinite; }
+  .hero-tags,
+  .hero-actions,
+  .hero-availability { animation: fade-up 600ms ease-out both; }
+  .hero-tags { animation-delay: 250ms; }
+  .hero-actions { animation-delay: 400ms; }
+  .hero-availability { animation-delay: 550ms; }
+  .hero-availability i { animation: soft-pulse 2.4s ease-in-out 1.2s infinite; }
+  html.js .scroll-reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity 700ms ease, transform 700ms ease; }
+  html.js .scroll-reveal.is-visible { opacity: 1; transform: translateY(0); }
+  html.js .scroll-reveal.is-visible .skill-group,
+  html.js .scroll-reveal.is-visible .tool-group,
+  html.js .scroll-reveal.is-visible .timeline-item,
+  html.js .scroll-reveal.is-visible .social-links li { animation: fade-scale 500ms ease-out both; }
+  html.js .scroll-reveal.is-visible .skill-group:nth-child(2),
+  html.js .scroll-reveal.is-visible .tool-group:nth-child(2),
+  html.js .scroll-reveal.is-visible .timeline-item:nth-child(2),
+  html.js .scroll-reveal.is-visible .social-links li:nth-child(2) { animation-delay: 100ms; }
+  html.js .scroll-reveal.is-visible .skill-group:nth-child(3),
+  html.js .scroll-reveal.is-visible .tool-group:nth-child(3),
+  html.js .scroll-reveal.is-visible .timeline-item:nth-child(3),
+  html.js .scroll-reveal.is-visible .social-links li:nth-child(3) { animation-delay: 200ms; }
+  html.js .scroll-reveal.is-visible .skill-group:nth-child(4),
+  html.js .scroll-reveal.is-visible .tool-group:nth-child(4),
+  html.js .scroll-reveal.is-visible .timeline-item:nth-child(4),
+  html.js .scroll-reveal.is-visible .social-links li:nth-child(4) { animation-delay: 300ms; }
+  html.js .scroll-reveal.is-visible .timeline-item:nth-child(5),
+  html.js .scroll-reveal.is-visible .social-links li:nth-child(5) { animation-delay: 400ms; }
+  nav a,
+  .skill-group,
+  .tool-group,
+  .social-links a,
+  .button { will-change: transform; }
+  .skill-group:hover,
+  .tool-group:hover { transform: translateY(-4px); transition: transform 180ms ease, border-color 180ms ease; }
+}
+
+@keyframes fade-up { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: translateY(0); } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-0.5rem); } }
+@keyframes fade-scale { from { opacity: 0; transform: translateY(0.75rem) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes soft-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.65; transform: scale(1.12); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
