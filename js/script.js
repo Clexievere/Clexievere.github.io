@@ -6,6 +6,7 @@ const themeIcon = themeToggle?.querySelector('i');
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('#nav-menu');
 const backToTop = document.querySelector('.back-to-top');
+const footer = document.querySelector('footer');
 const savedTheme = localStorage.getItem('theme');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -82,8 +83,18 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 // Show the floating control after the user has moved away from the top.
 window.addEventListener('scroll', () => {
-	backToTop?.classList.toggle('is-visible', window.scrollY > 500);
+	const footerInView = footer ? footer.getBoundingClientRect().top < window.innerHeight : false;
+
+	backToTop?.classList.toggle('is-visible', window.scrollY > 500 && !footerInView);
 }, { passive: true });
+
+if (footer && 'IntersectionObserver' in window) {
+	const footerObserver = new IntersectionObserver(([entry]) => {
+		backToTop?.classList.toggle('is-footer-visible', entry.isIntersecting);
+	}, { threshold: 0.05 });
+
+	footerObserver.observe(footer);
+}
 
 backToTop?.addEventListener('click', () => {
 	window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -118,23 +129,38 @@ projectFilters.forEach((filterButton) => {
 	});
 });
 
-// Reveal sections as they enter the viewport without hiding content when JavaScript is unavailable.
-const revealSections = document.querySelectorAll('main section:not(#hero)');
+// Reveal sections and longer About subsections as they enter the viewport.
+const revealTargets = document.querySelectorAll([
+	'main section:not(#hero)',
+	'.about-facts > div',
+	'.about-details > div',
+	'.about-timeline .timeline-item'
+].join(', '));
+let previousScrollY = window.scrollY;
+let scrollDirection = 'down';
+
+window.addEventListener('scroll', () => {
+	scrollDirection = window.scrollY < previousScrollY ? 'up' : 'down';
+	previousScrollY = window.scrollY;
+}, { passive: true });
 
 if ('IntersectionObserver' in window) {
-	const revealObserver = new IntersectionObserver((entries, observer) => {
+	const revealObserver = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
-				entry.target.classList.add('is-visible');
-				observer.unobserve(entry.target);
+				entry.target.classList.remove('is-visible', 'is-returning');
+				void entry.target.offsetWidth;
+				entry.target.classList.add(scrollDirection === 'up' ? 'is-returning' : 'is-visible');
+			} else {
+				entry.target.classList.remove('is-visible', 'is-returning');
 			}
 		});
-	}, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+	}, { rootMargin: '-8% 0px -18% 0px', threshold: 0.12 });
 
-	revealSections.forEach((section) => {
-		section.classList.add('scroll-reveal');
-		revealObserver.observe(section);
+	revealTargets.forEach((target) => {
+		target.classList.add('scroll-reveal');
+		revealObserver.observe(target);
 	});
 } else {
-	revealSections.forEach((section) => section.classList.add('is-visible'));
+	revealTargets.forEach((target) => target.classList.add('is-visible'));
 }

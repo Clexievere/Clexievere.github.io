@@ -37,16 +37,25 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
 }
 
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   background-color: var(--color-bg);
   color: var(--color-text);
+  overflow-x: clip;
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+main {
+  flex: 1;
 }
 
 h1,
