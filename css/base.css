@@ -14,6 +14,8 @@
   --color-accent-soft: #D9C4EC;
   --color-figure: #B47DDB;
   --color-success: #2F9E44;
+  --color-tag-border: #A875D2;
+  --color-tag-bg: #F0E5FA;
   --color-text: #2D2438;
   --color-text-muted: #6B5E7B;
   --font-heading: 'Space Grotesk', sans-serif;
@@ -32,6 +34,8 @@
   --color-accent-soft: #3A2E4D;
   --color-figure: #8B6FB3;
   --color-success: #69DB7C;
+  --color-tag-border: #B99ADD;
+  --color-tag-bg: #35294A;
   --color-text: #EDE7F6;
   --color-text-muted: #A99BC0;
 }
