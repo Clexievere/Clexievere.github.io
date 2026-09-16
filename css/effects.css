@@ -28,10 +28,10 @@
 #skills::before { top: 3rem; right: 4rem; width: 7rem; height: 7rem; }
 #tools::before { top: auto; right: 8rem; bottom: -4rem; left: auto; width: 9rem; height: 9rem; border-radius: 0; box-shadow: 0.65rem 0.65rem 0 var(--color-figure); transform: translateY(var(--figure-shift, 0px)) rotate(12deg); }
 
-.hero-photo-wrap { position: relative; width: 320px; height: 400px; justify-self: end; }
+.hero-photo-wrap { position: relative; width: 420px; height: 520px; justify-self: end; }
 .hero-photo-backdrop { position: absolute; top: 20px; right: -20px; width: 100%; height: 100%; border-radius: 200px 200px 0 0; background-color: var(--color-accent-soft); z-index: 1; }
-.hero-photo-frame { position: relative; width: 100%; height: 100%; border-radius: 200px 200px 0 0; overflow: hidden; background-color: var(--color-surface); z-index: 2; }
-.hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.hero-photo-frame { position: relative; width: 100%; height: 100%; border-radius: 200px 200px 0 0; background-color: var(--color-surface); z-index: 2; }
+.hero-photo-frame img { position: absolute; top: -57%; left: -27%; z-index: 3; width: 160%; height: 160%; object-fit: contain; object-position: center bottom; }
 
 .back-to-top { position: fixed; right: var(--space-md); bottom: var(--space-md); z-index: 9; display: grid; width: 2.75rem; height: 2.75rem; place-items: center; border: 1px solid var(--color-accent); border-radius: 50%; background-color: var(--color-accent); color: var(--color-bg); cursor: pointer; font-size: 1.4rem; opacity: 0; pointer-events: none; transform: translateY(1rem); transition: opacity 180ms ease, transform 180ms ease, background-color 180ms ease; }
 .back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }

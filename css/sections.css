@@ -41,7 +41,7 @@ section > .container,
 
 #hero .container {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 320px);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
   align-items: center;
   gap: var(--space-xl);
   width: 100%;
