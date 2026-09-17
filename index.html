@@ -50,6 +50,7 @@
       <ul id="nav-menu">
         <li><a href="#hero"><i class="bx bx-home-alt-2" aria-hidden="true"></i> Home</a></li>
         <li><a href="#about"><i class="bx bx-user" aria-hidden="true"></i> About</a></li>
+        <li><a href="#services"><i class="bx bx-briefcase" aria-hidden="true"></i> Services</a></li>
         <li><a href="#skills"><i class="bx bx-brain" aria-hidden="true"></i> Skills</a></li>
         <li><a href="#tools"><i class="bx bx-wrench" aria-hidden="true"></i> Tools</a></li>
         <li><a href="#projects"><i class="bx bx-folder-open" aria-hidden="true"></i> Projects</a></li>
@@ -201,10 +202,131 @@
         </div>
       </div>
     </section>
+
+    <section id="services" class="services-showcase">
+      <div class="container">
+        <div class="services-shell service-shell-animate">
+          <span class="shape-one" aria-hidden="true"></span>
+          <span class="shape-two" aria-hidden="true"></span>
+          <span class="shape-three" aria-hidden="true"></span>
+          <div class="services-header service-animate service-animate-left">
+            <div class="mini-badge"><i class="bx bx-wrench" aria-hidden="true"></i> Services</div>
+            <h2>Services Offered</h2>
+            <p>Reliable technical help for teams that want smoother systems, less chaos, and stronger day-to-day operations.</p>
+          </div>
+
+          <div class="service-tabs service-animate service-animate-right" role="tablist" aria-label="Service categories">
+            <button class="service-tab is-active" type="button" data-service="remote-support" aria-selected="true" role="tab" aria-controls="panel-remote-support">
+              <i class="bx bx-headphone" aria-hidden="true"></i> Remote Support
+            </button>
+            <button class="service-tab" type="button" data-service="systems-help" aria-selected="false" role="tab" aria-controls="panel-systems-help">
+              <i class="bx bx-desktop" aria-hidden="true"></i> Systems Help
+            </button>
+            <button class="service-tab" type="button" data-service="admin-support" aria-selected="false" role="tab" aria-controls="panel-admin-support">
+              <i class="bx bx-clipboard" aria-hidden="true"></i> Admin Support
+            </button>
+            <button class="service-tab" type="button" data-service="workflow-improvement" aria-selected="false" role="tab" aria-controls="panel-workflow-improvement">
+              <i class="bx bx-sitemap" aria-hidden="true"></i> Workflow Improvement
+            </button>
+          </div>
+
+          <div class="service-feature">
+            <article class="service-panel is-active" id="panel-remote-support" data-service-panel="remote-support">
+              <div class="service-feature-copy">
+                <div class="feature-icon"><i class="bx bx-headphone" aria-hidden="true"></i></div>
+                <h3>Remote Technical Support</h3>
+                <p>Support for troubleshooting, setup, system guidance, and practical digital assistance when your team needs clear answers fast.</p>
+                <a class="service-action" href="#contact">Let’s Chat <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+              </div>
+
+              <div class="service-visual" aria-hidden="true">
+                <div class="visual-layer visual-layer-one"></div>
+                <div class="visual-layer visual-layer-two"></div>
+                <div class="visual-card visual-card--support">
+                  <div class="mini-window"></div>
+                  <div class="portrait portrait--support">
+                    <span class="portrait-face"></span>
+                    <span class="portrait-glasses"></span>
+                    <span class="portrait-shirt"></span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="service-panel" id="panel-systems-help" data-service-panel="systems-help" hidden>
+              <div class="service-feature-copy">
+                <div class="feature-icon"><i class="bx bx-desktop" aria-hidden="true"></i></div>
+                <h3>Systems Help</h3>
+                <p>Hands-on help with setup, maintenance, troubleshooting, and day-to-day technical problem solving so systems stay dependable.</p>
+                <a class="service-action" href="#contact">Let’s Chat <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+              </div>
+
+              <div class="service-visual" aria-hidden="true">
+                <div class="visual-layer visual-layer-one"></div>
+                <div class="visual-layer visual-layer-two"></div>
+                <div class="visual-card visual-card--system">
+                  <div class="mini-window"></div>
+                  <div class="system-graphic">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="service-panel" id="panel-admin-support" data-service-panel="admin-support" hidden>
+              <div class="service-feature-copy">
+                <div class="feature-icon"><i class="bx bx-clipboard" aria-hidden="true"></i></div>
+                <h3>Administrative Support</h3>
+                <p>Organization, communication, documentation, and task coordination that help teams stay on top of everything without excess friction.</p>
+                <a class="service-action" href="#contact">Let’s Chat <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+              </div>
+
+              <div class="service-visual" aria-hidden="true">
+                <div class="visual-layer visual-layer-one"></div>
+                <div class="visual-layer visual-layer-two"></div>
+                <div class="visual-card visual-card--admin">
+                  <div class="mini-window"></div>
+                  <div class="admin-graphic">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="service-panel" id="panel-workflow-improvement" data-service-panel="workflow-improvement" hidden>
+              <div class="service-feature-copy">
+                <div class="feature-icon"><i class="bx bx-sitemap" aria-hidden="true"></i></div>
+                <h3>Workflow Improvement</h3>
+                <p>Reviewing repetitive work, cleaning up process bottlenecks, and improving how teams move from task to task with more clarity.</p>
+                <a class="service-action" href="#contact">Let’s Chat <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+              </div>
+
+              <div class="service-visual" aria-hidden="true">
+                <div class="visual-layer visual-layer-one"></div>
+                <div class="visual-layer visual-layer-two"></div>
+                <div class="visual-card visual-card--workflow">
+                  <div class="mini-window"></div>
+                  <div class="workflow-graphic">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
     
     <section id="skills">
       <div class="container">
-        <p class="section-kicker">02 / Skills</p>
+        <p class="section-kicker">03 / Skills</p>
         <h2>Skills</h2>
         <p class="section-intro">Capabilities I use to solve technical and operational problems.</p>
         <div class="skills-grid">
@@ -253,7 +375,7 @@
 
     <section id="tools">
       <div class="container">
-        <p class="section-kicker">03 / Tools</p>
+        <p class="section-kicker">04 / Tools</p>
         <h2>Tools</h2>
         <p class="section-intro">Software and platforms I use to build, organize, and support my work.</p>
         <div class="tools-grid">
@@ -314,7 +436,7 @@
 
     <section id="projects">
       <div class="container">
-        <p class="section-kicker">04 / Projects</p>
+        <p class="section-kicker">05 / Projects</p>
         <h2>Projects</h2>
         <p class="section-intro">A growing gallery of technical work, experiments, and future case studies.</p>
         <div class="project-filters" role="group" aria-label="Filter projects by category">
@@ -322,71 +444,23 @@
           <button class="project-filter" type="button" data-filter="technical" aria-pressed="false">Technical</button>
           <button class="project-filter" type="button" data-filter="web" aria-pressed="false">Web</button>
           <button class="project-filter" type="button" data-filter="operations" aria-pressed="false">Operations</button>
+          <button class="project-filter" type="button" data-filter="media" aria-pressed="false">Media</button>
         </div>
-        <div class="project-gallery">
-          <article class="project-card" data-category="technical">
-            <div class="project-preview project-preview-thesis" aria-hidden="true">
-              <div class="preview-browser-bar"><i></i><i></i><i></i></div>
-              <i class="bx bx-code-block"></i>
-              <span>Preview placeholder</span>
-            </div>
-            <div class="project-card-content">
-              <p class="project-category">Research & Development</p>
-              <h3>Ghidra-GDB Integration</h3>
-              <p>A reverse engineering workflow designed to reduce manual switching between Ghidra and GDB.</p>
-              <ul class="project-tags" aria-label="Technologies used">
-                <li>Python</li>
-                <li>Ghidra</li>
-                <li>GDB</li>
-              </ul>
-              <span class="project-link-placeholder">Case study coming soon</span>
-            </div>
-          </article>
 
-          <article class="project-card" data-category="web">
-            <div class="project-preview project-preview-portfolio" aria-hidden="true">
-              <div class="preview-browser-bar"><i></i><i></i><i></i></div>
-              <i class="bx bx-layout"></i>
-              <span>Preview placeholder</span>
-            </div>
-            <div class="project-card-content">
-              <p class="project-category">Web & Presentation</p>
-              <h3>Personal Portfolio</h3>
-              <p>A responsive portfolio that brings together technical experience, remote support, and operations work.</p>
-              <ul class="project-tags" aria-label="Technologies used">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-              <span class="project-link-placeholder">Live project in progress</span>
-            </div>
-          </article>
+        <div class="project-carousel-controls" aria-label="Project gallery controls">
+          <button class="project-carousel-btn project-carousel-prev" type="button" aria-label="Previous project">&#8249;</button>
+          <button class="project-carousel-btn project-carousel-next" type="button" aria-label="Next project">&#8250;</button>
+        </div>
 
-          <article class="project-card project-card-placeholder" data-category="operations">
-            <div class="project-preview project-preview-next" aria-hidden="true">
-              <div class="preview-browser-bar"><i></i><i></i><i></i></div>
-              <i class="bx bx-lock-alt"></i>
-              <span>Next project slot</span>
-            </div>
-            <div class="project-card-content">
-              <p class="project-category">Coming Next</p>
-              <h3>Remote Workflow Project</h3>
-              <p>A future case study showing how technical thinking can improve organization, support, or team operations.</p>
-              <ul class="project-tags" aria-label="Potential project areas">
-                <li>Operations</li>
-                <li>Automation</li>
-                <li>Support</li>
-              </ul>
-              <span class="project-link-placeholder">Details to be unlocked</span>
-            </div>
-          </article>
+        <div class="project-gallery-window">
+          <div class="project-gallery" id="project-gallery" aria-live="polite"></div>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <div class="container">
-        <p class="section-kicker">05 / Contact</p>
+        <p class="section-kicker">06 / Contact</p>
         <h2>Contact Me</h2>
         <div class="contact-layout">
           <div class="contact-copy">

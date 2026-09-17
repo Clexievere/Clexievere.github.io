@@ -20,9 +20,14 @@
 }
 
 @media (max-width: 760px) {
+  .services-shell { padding: 1.25rem; border-radius: 0; }
+  .service-tabs { gap: 0.5rem; }
+  .service-tab { width: 100%; justify-content: center; }
+  .service-panel { grid-template-columns: 1fr; }
+  .services-grid,
   .skills-grid,
   .tools-grid { grid-template-columns: 1fr; }
-  .project-gallery { grid-template-columns: 1fr; }
+  .project-card { flex-basis: calc(100% - 0.25rem); }
 
   .about-layout,
   .about-details { grid-template-columns: 1fr; gap: var(--space-lg); }
