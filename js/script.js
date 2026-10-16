@@ -7,7 +7,12 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('#nav-menu');
 const backToTop = document.querySelector('.back-to-top');
 const footer = document.querySelector('footer');
-const savedTheme = localStorage.getItem('theme');
+let savedTheme = null;
+try {
+	savedTheme = localStorage.getItem('theme');
+} catch {
+	// Storage can be blocked (e.g. some private modes); fall back to the system preference.
+}
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 // Keep the document theme, button label, state, and icon synchronized.
@@ -29,7 +34,11 @@ themeToggle?.addEventListener('click', () => {
 	const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
 
 	setTheme(nextTheme);
-	localStorage.setItem('theme', nextTheme);
+	try {
+		localStorage.setItem('theme', nextTheme);
+	} catch {
+		// The choice still applies for this visit even if it can't be saved.
+	}
 });
 
 // Open or close the mobile navigation and keep its accessible state updated.
@@ -81,12 +90,31 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 	updateFigureParallax();
 }
 
+// Layout-reading scroll checks share one handler and run at most once per animation frame.
+const scrollChecks = [];
+let scrollChecksRequested = false;
+
+function runScrollChecks() {
+	scrollChecks.forEach((check) => check());
+	scrollChecksRequested = false;
+}
+
+function requestScrollChecks() {
+	if (!scrollChecksRequested) {
+		window.requestAnimationFrame(runScrollChecks);
+		scrollChecksRequested = true;
+	}
+}
+
+window.addEventListener('scroll', requestScrollChecks, { passive: true });
+window.addEventListener('resize', requestScrollChecks);
+
 // Show the floating control after the user has moved away from the top.
-window.addEventListener('scroll', () => {
+scrollChecks.push(() => {
 	const footerInView = footer ? footer.getBoundingClientRect().top < window.innerHeight : false;
 
 	backToTop?.classList.toggle('is-visible', window.scrollY > 500 && !footerInView);
-}, { passive: true });
+});
 
 if (footer && 'IntersectionObserver' in window) {
 	const footerObserver = new IntersectionObserver(([entry]) => {
@@ -282,7 +310,7 @@ function renderProjects(selectedCategory = 'all') {
 			<div class="project-preview ${project.previewClass}" aria-hidden="true">
 				<div class="preview-browser-bar"><i></i><i></i><i></i></div>
 				${project.previewImage ? `
-					<img class="project-preview-image" src="${project.previewImage}" alt="${project.title} preview" />
+					<img class="project-preview-image" src="${project.previewImage}" alt="${project.title} preview" width="935" height="1210" loading="lazy" decoding="async" />
 				` : `
 					<i class="${project.icon}"></i>
 					<span>${project.previewLabel}</span>
@@ -471,8 +499,7 @@ if ('IntersectionObserver' in window) {
 		};
 
 		updateServicesReveal();
-		window.addEventListener('scroll', updateServicesReveal, { passive: true });
-		window.addEventListener('resize', updateServicesReveal);
+		scrollChecks.push(updateServicesReveal);
 	}
 
 	[skillSection, toolsSection].forEach((section) => {
@@ -486,8 +513,7 @@ if ('IntersectionObserver' in window) {
 		};
 
 		updateGridReveal();
-		window.addEventListener('scroll', updateGridReveal, { passive: true });
-		window.addEventListener('resize', updateGridReveal);
+		scrollChecks.push(updateGridReveal);
 	});
 } else {
 	revealTargets.forEach((target) => target.classList.add('is-visible'));
@@ -501,3 +527,17 @@ if ('IntersectionObserver' in window) {
 		toolsSection.classList.add('is-visible');
 	}
 }
+
+// Load the YouTube player only when the visitor asks for it.
+document.querySelectorAll('.video-facade').forEach((facade) => {
+	facade.addEventListener('click', () => {
+		const iframe = document.createElement('iframe');
+
+		iframe.src = `https://www.youtube-nocookie.com/embed/${facade.dataset.videoId}?autoplay=1`;
+		iframe.title = facade.dataset.videoTitle || 'YouTube video';
+		iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+		iframe.allowFullscreen = true;
+		facade.replaceWith(iframe);
+		iframe.focus();
+	}, { once: true });
+});
