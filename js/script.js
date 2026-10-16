@@ -156,6 +156,58 @@ const projectData = [
 		linkLabel: 'Explore'
 	},
 	{
+		title: 'Document Prep Package',
+		category: 'operations',
+		categoryLabel: 'Admin & Operations',
+		description: 'Three branded, reusable Word templates for a property manager: a welcome letter, a maintenance request form, and a move-in checklist.',
+		tags: ['Microsoft Word', 'Templates', 'Documentation'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-file',
+		previewImage: 'resources/images/samples/document-prep-package.webp',
+		status: 'Sample work · fictional client',
+		link: 'resources/samples/document-prep-package.pdf',
+		linkLabel: 'View document'
+	},
+	{
+		title: 'Tenant Records Cleanup',
+		category: 'operations',
+		categoryLabel: 'Admin & Operations',
+		description: 'A messy shared tenant list cleaned into one traceable record set, with duplicates merged and uncertain values flagged instead of guessed.',
+		tags: ['Microsoft Excel', 'Data Cleanup', 'Validation'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-spreadsheet',
+		previewImage: 'resources/images/samples/tenant-records-cleanup.webp',
+		status: 'Sample work · fictional client',
+		link: 'resources/samples/tenant-records-cleanup.pdf',
+		linkLabel: 'View document'
+	},
+	{
+		title: 'Research Brief: Maintenance Tool',
+		category: 'operations',
+		categoryLabel: 'Admin & Operations',
+		description: 'A recommendation-first brief comparing three maintenance request tools on price, ease of use, and limits, with dated sources.',
+		tags: ['Google Docs', 'Research', 'Reporting'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-search-alt',
+		previewImage: 'resources/images/samples/research-brief-maintenance-tool.webp',
+		status: 'Sample work · fictional client',
+		link: 'resources/samples/research-brief-maintenance-tool.pdf',
+		linkLabel: 'View document'
+	},
+	{
+		title: 'Inbox & Calendar Management',
+		category: 'operations',
+		categoryLabel: 'Admin & Operations',
+		description: 'Fifteen emails triaged against client rules: an emergency escalated, a phishing attempt caught, and a conflict-free week scheduled across time zones.',
+		tags: ['Google Calendar', 'Email Triage', 'Scheduling'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-calendar',
+		previewImage: 'resources/images/samples/inbox-calendar-management.webp',
+		status: 'Sample work · fictional client',
+		link: 'resources/samples/inbox-calendar-management.pdf',
+		linkLabel: 'View document'
+	},
+	{
 		title: 'Remote Workflow Project',
 		category: 'operations',
 		categoryLabel: 'Coming Next',
