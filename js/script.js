@@ -141,8 +141,64 @@ const projectData = [
 	// Use operations for workflow, admin systems, inbox/process improvements, reporting work, and other operational tooling.
 	// Use media for content-focused or visual showcase work; keep the filter list lean and only add more categories if they become truly needed.
 	// Required fields: title, category, categoryLabel, description, tags.
-	// Optional fields: previewImage, previewClass, previewLabel, icon, status, link, linkLabel, placeholder.
+	// Optional fields: highlight, previewImage, previewClass, previewLabel, icon, status, link, linkLabel, placeholder.
 	// If previewImage exists, clicking the card opens that image in a centered lightbox.
+	{
+		title: 'Inbox & Calendar Management',
+		category: 'operations',
+		categoryLabel: 'Admin & Operations',
+		description: 'Fifteen emails triaged against client rules: an emergency escalated, a phishing attempt caught, and a conflict-free week scheduled across time zones.',
+		highlight: 'Shows the judgment calls I keep manual, like catching a phishing attempt.',
+		tags: ['Google Calendar', 'Email Triage', 'Scheduling'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-calendar',
+		previewImage: 'resources/images/samples/inbox-calendar-management.webp',
+		status: 'Sample work · fictional client',
+		link: 'resources/samples/inbox-calendar-management.pdf',
+		linkLabel: 'View document'
+	},
+	{
+		title: 'Document Prep Package',
+		category: 'operations',
+		categoryLabel: 'Admin & Operations',
+		description: 'Three branded, reusable Word templates for a property manager: a welcome letter, a maintenance request form, and a move-in checklist.',
+		highlight: 'Reflects my law firm work drafting documents from templates.',
+		tags: ['Microsoft Word', 'Templates', 'Documentation'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-file',
+		previewImage: 'resources/images/samples/document-prep-package.webp',
+		status: 'Sample work · fictional client',
+		link: 'resources/samples/document-prep-package.pdf',
+		linkLabel: 'View document'
+	},
+	{
+		title: 'Tenant Records Cleanup',
+		category: 'operations',
+		categoryLabel: 'Admin & Operations',
+		description: 'A messy shared tenant list cleaned into one traceable record set, with duplicates merged and uncertain values flagged instead of guessed.',
+		highlight: 'Shows how I handle messy data: flag what\'s uncertain, never guess or delete.',
+		tags: ['Microsoft Excel', 'Data Cleanup', 'Validation'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-spreadsheet',
+		previewImage: 'resources/images/samples/tenant-records-cleanup.webp',
+		status: 'Sample work · fictional client',
+		link: 'resources/samples/tenant-records-cleanup.pdf',
+		linkLabel: 'View document'
+	},
+	{
+		title: 'Research Brief: Maintenance Tool',
+		category: 'operations',
+		categoryLabel: 'Admin & Operations',
+		description: 'A recommendation-first brief comparing three maintenance request tools on price, ease of use, and limits, with dated sources.',
+		highlight: 'Builds on my legislation research, where every claim had to match a source.',
+		tags: ['Google Docs', 'Research', 'Reporting'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-search-alt',
+		previewImage: 'resources/images/samples/research-brief-maintenance-tool.webp',
+		status: 'Sample work · fictional client',
+		link: 'resources/samples/research-brief-maintenance-tool.pdf',
+		linkLabel: 'View document'
+	},
 	{
 		title: 'Ghidra-GDB Integration',
 		category: 'technical',
@@ -182,72 +238,6 @@ const projectData = [
 		status: 'Concept in progress',
 		link: '#',
 		linkLabel: 'Explore'
-	},
-	{
-		title: 'Document Prep Package',
-		category: 'operations',
-		categoryLabel: 'Admin & Operations',
-		description: 'Three branded, reusable Word templates for a property manager: a welcome letter, a maintenance request form, and a move-in checklist.',
-		tags: ['Microsoft Word', 'Templates', 'Documentation'],
-		previewClass: 'project-preview-portfolio',
-		icon: 'bx bx-file',
-		previewImage: 'resources/images/samples/document-prep-package.webp',
-		status: 'Sample work · fictional client',
-		link: 'resources/samples/document-prep-package.pdf',
-		linkLabel: 'View document'
-	},
-	{
-		title: 'Tenant Records Cleanup',
-		category: 'operations',
-		categoryLabel: 'Admin & Operations',
-		description: 'A messy shared tenant list cleaned into one traceable record set, with duplicates merged and uncertain values flagged instead of guessed.',
-		tags: ['Microsoft Excel', 'Data Cleanup', 'Validation'],
-		previewClass: 'project-preview-portfolio',
-		icon: 'bx bx-spreadsheet',
-		previewImage: 'resources/images/samples/tenant-records-cleanup.webp',
-		status: 'Sample work · fictional client',
-		link: 'resources/samples/tenant-records-cleanup.pdf',
-		linkLabel: 'View document'
-	},
-	{
-		title: 'Research Brief: Maintenance Tool',
-		category: 'operations',
-		categoryLabel: 'Admin & Operations',
-		description: 'A recommendation-first brief comparing three maintenance request tools on price, ease of use, and limits, with dated sources.',
-		tags: ['Google Docs', 'Research', 'Reporting'],
-		previewClass: 'project-preview-portfolio',
-		icon: 'bx bx-search-alt',
-		previewImage: 'resources/images/samples/research-brief-maintenance-tool.webp',
-		status: 'Sample work · fictional client',
-		link: 'resources/samples/research-brief-maintenance-tool.pdf',
-		linkLabel: 'View document'
-	},
-	{
-		title: 'Inbox & Calendar Management',
-		category: 'operations',
-		categoryLabel: 'Admin & Operations',
-		description: 'Fifteen emails triaged against client rules: an emergency escalated, a phishing attempt caught, and a conflict-free week scheduled across time zones.',
-		tags: ['Google Calendar', 'Email Triage', 'Scheduling'],
-		previewClass: 'project-preview-portfolio',
-		icon: 'bx bx-calendar',
-		previewImage: 'resources/images/samples/inbox-calendar-management.webp',
-		status: 'Sample work · fictional client',
-		link: 'resources/samples/inbox-calendar-management.pdf',
-		linkLabel: 'View document'
-	},
-	{
-		title: 'Remote Workflow Project',
-		category: 'operations',
-		categoryLabel: 'Coming Next',
-		description: 'A future case study showing how technical thinking can improve organization, support, or team operations.',
-		tags: ['Operations', 'Automation', 'Support'],
-		previewClass: 'project-preview-next',
-		previewLabel: 'Next project slot',
-		icon: 'bx bx-lock-alt',
-		status: 'Details to be unlocked',
-		link: '#',
-		linkLabel: 'Explore',
-		placeholder: true
 	}
 ];
 let projectCards = [];
@@ -320,6 +310,7 @@ function renderProjects(selectedCategory = 'all') {
 				<p class="project-category">${project.categoryLabel}</p>
 				<h3>${project.title}</h3>
 				<p>${project.description}</p>
+				${project.highlight ? `<p class="project-highlight">${project.highlight}</p>` : ''}
 				<ul class="project-tags" aria-label="Project details">
 					${project.tags.map((tag) => `<li>${tag}</li>`).join('')}
 				</ul>
@@ -541,3 +532,86 @@ document.querySelectorAll('.video-facade').forEach((facade) => {
 		iframe.focus();
 	}, { once: true });
 });
+
+// Send the contact form in the background and confirm the result in a popup instead of leaving the page.
+const contactForm = document.querySelector('.contact-form');
+const formDialog = document.createElement('div');
+formDialog.className = 'project-lightbox form-dialog';
+formDialog.setAttribute('aria-hidden', 'true');
+formDialog.innerHTML = `
+	<div class="form-dialog__panel" role="dialog" aria-modal="true" aria-labelledby="form-dialog-title" aria-describedby="form-dialog-text">
+		<i class="form-dialog__icon bx" aria-hidden="true"></i>
+		<h3 class="form-dialog__title" id="form-dialog-title"></h3>
+		<p class="form-dialog__text" id="form-dialog-text"></p>
+		<button class="button button-primary form-dialog__ok" type="button">OK</button>
+	</div>
+`;
+document.body.appendChild(formDialog);
+
+const formDialogMessages = {
+	success: { icon: 'bx-check-circle', title: 'Message sent', text: 'Thanks for reaching out. I\'ll get back to you soon.' },
+	error: { icon: 'bx-error-circle', title: 'Something went wrong', text: 'Your message wasn\'t sent. Please try again, or reach me on LinkedIn.' }
+};
+
+function openFormDialog(state) {
+	const message = formDialogMessages[state];
+
+	formDialog.classList.toggle('is-error', state === 'error');
+	formDialog.querySelector('.form-dialog__icon').className = `form-dialog__icon bx ${message.icon}`;
+	formDialog.querySelector('.form-dialog__title').textContent = message.title;
+	formDialog.querySelector('.form-dialog__text').textContent = message.text;
+	formDialog.classList.add('is-open');
+	formDialog.setAttribute('aria-hidden', 'false');
+	formDialog.querySelector('.form-dialog__ok').focus();
+}
+
+function closeFormDialog() {
+	if (!formDialog.classList.contains('is-open')) return;
+
+	formDialog.classList.remove('is-open');
+	formDialog.setAttribute('aria-hidden', 'true');
+	contactForm?.querySelector('[type="submit"]')?.focus();
+}
+
+formDialog.querySelector('.form-dialog__ok').addEventListener('click', closeFormDialog);
+formDialog.addEventListener('click', (event) => {
+	if (event.target === formDialog) {
+		closeFormDialog();
+	}
+});
+document.addEventListener('keydown', (event) => {
+	if (event.key === 'Escape') {
+		closeFormDialog();
+	}
+});
+
+// Without fetch, the form falls back to a normal Formspree submission.
+if (contactForm && 'fetch' in window) {
+	contactForm.addEventListener('submit', async (event) => {
+		event.preventDefault();
+
+		const submitButton = contactForm.querySelector('[type="submit"]');
+		const submitLabel = submitButton.textContent;
+
+		submitButton.disabled = true;
+		submitButton.textContent = 'Sending…';
+
+		try {
+			const response = await fetch(contactForm.action, {
+				method: 'POST',
+				body: new FormData(contactForm),
+				headers: { Accept: 'application/json' }
+			});
+
+			if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
+
+			contactForm.reset();
+			openFormDialog('success');
+		} catch {
+			openFormDialog('error');
+		} finally {
+			submitButton.disabled = false;
+			submitButton.textContent = submitLabel;
+		}
+	});
+}
