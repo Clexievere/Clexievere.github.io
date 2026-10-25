@@ -200,6 +200,39 @@ const projectData = [
 		linkLabel: 'View document'
 	},
 	{
+		title: 'Hiraya Coffee House: Seasonal Drink Poster',
+		category: 'media',
+		categoryLabel: 'Design & Media',
+		description: 'A launch poster for an ube latte, with soft lavender tones and a warm, hand-drawn feel.',
+		tags: ['Canva', 'Poster Design', 'Food & Beverage'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-image',
+		previewImage: 'resources/images/posters/hiraya-coffee-house.webp',
+		status: 'Sample work · fictional brand'
+	},
+	{
+		title: 'Luntian Plant Studio: Weekend Sale Poster',
+		category: 'media',
+		categoryLabel: 'Design & Media',
+		description: 'A sale poster that leads with the offer, set in calm greens with a clear weekend-only date line.',
+		tags: ['Canva', 'Poster Design', 'Retail'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-image',
+		previewImage: 'resources/images/posters/luntian-plant-studio.webp',
+		status: 'Sample work · fictional brand'
+	},
+	{
+		title: 'Tala Bakeshop: Bakery Poster',
+		category: 'media',
+		categoryLabel: 'Design & Media',
+		description: 'A morning-bake poster for ensaymada, with a vintage bakeshop frame and a clear pre-order call to action.',
+		tags: ['Canva', 'Poster Design', 'Bakery'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-image',
+		previewImage: 'resources/images/posters/tala-bakeshop.webp',
+		status: 'Sample work · fictional brand'
+	},
+	{
 		title: 'Ghidra-GDB Integration',
 		category: 'technical',
 		categoryLabel: 'Research & Development',
