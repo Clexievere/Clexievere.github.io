@@ -200,6 +200,34 @@ const projectData = [
 		linkLabel: 'View document'
 	},
 	{
+		title: 'Business Email Compromise Response',
+		category: 'technical',
+		categoryLabel: 'IT Support',
+		description: 'Contained a hijacked staff mailbox, traced 700+ attacker sign-ins to one stolen session, and gave IT a report it could verify, all in one evening.',
+		highlight: 'Shows how I work under pressure: contain first, preserve evidence, then write for the people who have to act.',
+		tags: ['Microsoft 365', 'PowerShell', 'Python'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-shield-quarter',
+		previewImage: 'resources/images/samples/it-business-email-compromise.webp',
+		status: 'Real project · client details removed',
+		link: 'resources/samples/it-business-email-compromise.pdf',
+		linkLabel: 'View document'
+	},
+	{
+		title: 'Resolving a OneDrive Sync Conflict Cascade',
+		category: 'technical',
+		categoryLabel: 'IT Support',
+		description: 'Traced a crashing OneDrive to a runaway sync conflict and renamed about 130,000 conflict copies without deleting a single record.',
+		highlight: 'The file-sync cleanup from my About section, in full: I renamed instead of deleting.',
+		tags: ['OneDrive', 'PowerShell', 'Records Management'],
+		previewClass: 'project-preview-portfolio',
+		icon: 'bx bx-cloud',
+		previewImage: 'resources/images/samples/it-onedrive-sync-conflict.webp',
+		status: 'Real project · client details removed',
+		link: 'resources/samples/it-onedrive-sync-conflict.pdf',
+		linkLabel: 'View document'
+	},
+	{
 		title: 'Hiraya Coffee House: Seasonal Drink Poster',
 		category: 'media',
 		categoryLabel: 'Design & Media',
